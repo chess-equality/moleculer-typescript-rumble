@@ -131,7 +131,7 @@ const ProductsService: ServiceSchema<ProductSettings> & { methods: DbServiceMeth
 		/**
 		 * Loading sample data to the collection.
 		 * It is called in the DB.mixin after the database
-		 * connection establishing & the collection is empty.
+		 * connection is established & the collection is empty.
 		 */
 		async seedDB(this: ProductsThis) {
 			await this.adapter.insertMany([
@@ -143,7 +143,7 @@ const ProductsService: ServiceSchema<ProductSettings> & { methods: DbServiceMeth
 	},
 
 	/**
-	 * Fired after database connection establishing.
+	 * Fired after database connection is established.
 	 */
 	async afterConnected(this: ProductsThis) {
 		if ("collection" in this.adapter) {

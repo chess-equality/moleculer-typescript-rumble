@@ -71,17 +71,17 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 	/**
 	 * Service created lifecycle event handler
 	 */
-	created(this: GreeterThis) {},
+	// created(this: GreeterThis) {},
 
 	/**
 	 * Service started lifecycle event handler
 	 */
-	async started(this: GreeterThis) {},
+	// async started(this: GreeterThis) {},
 
 	/**
 	 * Service stopped lifecycle event handler
 	 */
-	async stopped(this: GreeterThis) {},
+	// async stopped(this: GreeterThis) {},
 };
 
 export default GreeterService;

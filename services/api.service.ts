@@ -114,7 +114,7 @@ const ApiService: ServiceSchema<ApiSettingsSchema> = {
 
 	methods: {
 		/**
-		 * Authenticate the request. It check the `Authorization` token value in the request header.
+		 * Authenticate the request. It checks the `Authorization` token value in the request header.
 		 * Check the token value & resolve the user by the token.
 		 * The resolved user will be available in `ctx.meta.user`
 		 *
@@ -157,7 +157,7 @@ const ApiService: ServiceSchema<ApiSettingsSchema> = {
 			// Get the authenticated user.
 			const { user } = ctx.meta;
 
-			// It check the `auth` property in action schema.
+			// It checks the `auth` property in action schema.
 			if (req.$action.auth === "required" && !user) {
 				throw new ApiGateway.Errors.UnAuthorizedError("NO_RIGHTS", null);
 			}
